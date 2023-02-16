@@ -1,0 +1,152 @@
+.App {
+  background-color: #f1f5f8;
+  height: 100vh;
+  position: relative;
+}
+
+.bars {
+  color: orange;
+  font-size: 5rem;
+  cursor: pointer;
+  position: absolute;
+  top: 5rem;
+  left: 5rem;
+  animation: zoominout infinite 1.5s;
+  z-index: 1;
+}
+
+.btn-modal {
+  background-color: black;
+  color: #fff;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-size: inherit;
+  padding: 0.5rem 1rem;
+  border: 2px solid #000;
+  border-radius: 5px;
+  transition: 0.25s ease-in-out;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 1;
+}
+
+.btn-modal:hover {
+  background-color: #fff;
+  color: #000;
+}
+
+.modal-container {
+  position: absolute;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.5);
+  z-index: 10;
+}
+
+.modal {
+  width: 60rem;
+  height: 25rem;
+  background-color: #fff;
+  border-radius: 5px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.btn-close {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  font-size: 3rem;
+  color: #bb2929;
+  cursor: pointer;
+}
+
+.sidebar {
+  width: 40rem;
+  height: 100vh;
+  background-color: #fff;
+  transition: 0.5s ease-in-out;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+}
+
+.sidebar.active {
+  transform: translateX(0);
+}
+
+.sidebar.inactive {
+  transform: translateX(-105%);
+}
+
+h2 {
+  padding: 2rem 3rem;
+}
+
+.menu {
+  margin-top: 5rem;
+  list-style-type: none;
+}
+
+ul li {
+  transition: 0.25s ease-in-out;
+}
+
+.menu li:hover {
+  background-color: #48647f22;
+}
+
+.menu li a {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  font-size: 2.5rem;
+  color: #48647f;
+  padding: 1.5rem 3rem;
+}
+
+.menu li a span:first-child {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-media-icons {
+  list-style-type: none;
+  position: absolute;
+  bottom: 5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 2rem;
+}
+
+.social-media-icons li a {
+  font-size: 2.5rem;
+  color: orange;
+  transition: 0.25s ease-in-out;
+}
+
+.social-media-icons li a:hover {
+  color: rgb(100, 62, 0);
+}
+
+@media (max-width: 600px) {
+  .modal {
+    width: 90%;
+  }
+}
+
+@media (max-width: 450px) {
+  .sidebar {
+    width: 100%;
+  }
+}
